@@ -62,5 +62,86 @@ time.sleep(5)
 xfer_next = driver.find_element(By.ID, "create-listing-next-btn")
 xfer_next.click()
 
+time.sleep(5)
+
+txquantity = driver.find_element(By.XPATH, "/html/body/div[1]/div[1]/div[2]/div/div/div[3]/div[2]/div/div/div[2]/div/div/button/div[1]")
+txquantity.click()
+
+time.sleep(5)
+
+quantselect = driver.find_element(By.XPATH, '//*[@id="ticket-wallet-wrapper"]/div/div[3]/div[2]/div/div/div[2]/div/div/div/button[1]')
+quantselect.click()
+
+time.sleep(5)
+
+xferrdy = driver.find_element(By.XPATH, "/html/body/div[1]/div[1]/div[2]/div/div/div[3]/div[2]/div/div/div[3]/div/button[1]/div")
+xferrdy.click()
+
+time.sleep(5)
+
+ogpurchase = driver.find_element(By.XPATH, "/html/body/div[1]/div[1]/div[2]/div/div/div[3]/div[2]/div/div/div[4]/div/div/button/div[1]")
+ogpurchase.click()
+
+time.sleep(5)
+
+ogpurchaseselect = driver.find_element(By.XPATH, "/html/body/div[1]/div[1]/div[2]/div/div/div[3]/div[2]/div/div/div[4]/div/div/div/button[1]")
+ogpurchaseselect.click()
+
+time.sleep(5)
+
+genadmission = driver.find_element(By.XPATH, "/html/body/div[1]/div[1]/div[2]/div/div/div[3]/div[2]/div/div/div[5]/div/div/button[1]/div")
+genadmission.click()
+
+time.sleep(5)
+
+tixlocation = driver.find_element(By.XPATH, "/html/body/div[1]/div[1]/div[2]/div/div/div[3]/div[2]/div/div/div[5]/div/div[2]/div[2]/div/div/div/button")
+tixlocation.click()
+
+time.sleep(5)
+
+tixlocationselect = driver.find_element(By.XPATH, "/html/body/div[1]/div[1]/div[2]/div/div/div[3]/div[2]/div/div/div[5]/div/div[2]/div[2]/div/div/div/div/button[1]")
+tixlocationselect.click()
+
+time.sleep(5)
+
+tixnextbtn = driver.find_element(By.ID, "create-listing-next-btn")
+tixnextbtn.click()
+
+time.sleep(5)
+
+tixprice = driver.find_element(By.ID, "create-listing-price-per-number-input")
+tixprice.send_keys("12")
+
+time.sleep(5)
+
+valueradiobtn = driver.find_element(By.XPATH, "/html/body/div[1]/div[1]/div[2]/div/div/div[3]/div[2]/div/div[3]/label[1]/div/div")
+valueradiobtn.click()
+
+time.sleep(5)
+
+pricenxtbtn = driver.find_element(By.ID, "create-listing-next-btn")
+pricenxtbtn.click()
+
+time.sleep(5)
+
+fundsnxtbtn = driver.find_element(By.ID, "create-listing-next-btn")
+fundsnxtbtn.click()
+
+time.sleep(5)
+
+textfield = driver.find_element(By.XPATH, "/html/body/div[1]/div[1]/div[2]/div/div/div[3]/div[1]/div/div[1]/textarea")
+textfield.send_keys("TEST")
+
+time.sleep(5)
+
+fundsnxtbtn.click()
+
+time.sleep(5)
+
+fundsnxtbtn.click()
+
+time.sleep(5)
+
+
 
 driver.quit()
