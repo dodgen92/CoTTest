@@ -34,7 +34,7 @@ if operation =="3":
 
 
 
-driver.get("https://www.google.com/")  
+ 
 
 logging.info("Navigating to the website")
 driver.get('https://front-stage.cashortrade.org/');     #opens webpage
