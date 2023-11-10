@@ -6,11 +6,35 @@ import time
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import logging
+from selenium.webdriver.chrome.service import Service as ChromeService
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.edge.service import Service as EdgeService
+from webdriver_manager.microsoft import EdgeChromiumDriverManager
+from selenium.webdriver.firefox.service import Service as FirefoxService
+from webdriver_manager.firefox import GeckoDriverManager
 
 
 
 
-driver = webdriver.Chrome()  # Webdriver-manager will handle path, if not installed specify path of webdriver
+print ("Choose Browser Test")
+print ("1. Firefox")
+print ("2. Chrome")
+print ("3. Edge")
+operation = input()
+
+if operation == "1":
+    driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()))
+
+if operation == "2":
+    driver = webdriver.Chrome() 
+    
+if operation =="3":
+    driver = webdriver.Edge(service=EdgeService(EdgeChromiumDriverManager().install()))
+
+
+
+
+driver.get("https://www.google.com/")  
 
 logging.info("Navigating to the website")
 driver.get('https://front-stage.cashortrade.org/');     #opens webpage
@@ -105,15 +129,14 @@ try:
 
     time.sleep(2)
       
-    fundsnxtbtn.click()
+    posttixbtn = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.ID, "create-listing-post-tickets-btn")))
+    driver.execute_script("arguments[0].scrollIntoView();", tixnextbtn)  
+    posttixbtn.click()
+
+    time.sleep(4)
 
     print("Test Case passed")
 
 
 finally:
     driver.quit()
-
-
-
-
-driver.quit()
